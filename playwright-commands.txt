@@ -1,0 +1,44 @@
+/**
+Playwright has its own test runner for end-to-end tests called Playwright Test. Playwright Test provides a test function to declare tests, and an expect function 
+to write assertions.
+*/
+
+npm i -D @playwright/test
+
+/**
+Install the supported browsers.
+*/
+
+npx playwright install
+
+
+// run the test in headless mode
+npx playwright test
+
+//Run all the tests
+npx playwright test
+
+//Run a single test file
+npx playwright test tests/example.spec.js
+npx playwright test --headed tests/example.spec.js
+
+//Run a set of test files
+npx playwright test tests/todo-page/ tests/landing-page/
+
+
+//Run tests in a particular browser (config-less mode)
+npx playwright test --browser=webkit --headed tests/example.spec.js
+
+//Run tests in all browsers (config-less mode)
+npx playwright test --browser=all --headed tests/example.spec.js
+
+//Run in headed browser instead.
+npx playwright test --headed
+
+//to open the report in html
+npx playwright test --reporter=html --headed
+
+//If you put your configuration file in a different place (other than 'tests' folder), pass it with — config option.
+//for some reason, putting config file in 'tests' folder does not work for me. I have to put it inside the main project folder.
+
+npx playwright test --config=tests/playwright.config.js

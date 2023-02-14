@@ -1,0 +1,13 @@
+https://medium.com/geekculture/maintainable-automated-test-design-d325dd13b868'
+--project structure: one test helper, one pages folder containing many page classes, one 'Spec' folder.
+'Spec' = specification: the technical details of a given feature or application which must be fulfilled
+--reusable functions and page classes
+I favor having no assertions in page objects. I think you can avoid duplication by providing assertion libraries for common assertions - which can also make it 
+easier to provide good diagnostics. Page objects are commonly used for testing, but should not make assertions themselves. Their responsibility is to provide access to the state of the underlying page.
+
+POM:  A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever 
+they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within
+the page object needs to change. Subsequently, all changes to support that new UI are located in one place.
+Advantages:
+There is a clean separation between the test code and page-specific code, such as locators (or their use if you’re using a UI Map) and layout.
+There is a single repository for the services or operations the page offers rather than having these services scattered throughout the tests.

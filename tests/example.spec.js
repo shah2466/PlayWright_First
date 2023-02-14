@@ -1,6 +1,19 @@
-const { test, expect } = require("@playwright/test");
-test("basic test", async ({ page }) => {
+// example.spec.js
+import { test, expect } from "@playwright/test";
+
+test("has title", async ({ page }) => {
   await page.goto("https://playwright.dev/");
-  const title = page.locator(".navbar__inner .navbar__title");
-  await expect(title).toHaveText("Playwright");
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+});
+
+test("get started link", async ({ page }) => {
+  await page.goto("https://playwright.dev/");
+
+  // Click the get started link.
+  await page.getByRole("link", { name: "Get started" }).click();
+
+  // Expects the URL to contain intro.
+  await expect(page).toHaveURL(/.*intro/);
 });

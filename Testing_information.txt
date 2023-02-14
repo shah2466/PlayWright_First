@@ -1,0 +1,17 @@
+So, for better readability and maintainability, an automated test script is classified into two tiers.
+Helper  and Pages
+Automated end-to-end tests need to be run daily in a Continuous Testing server.
+End User Satisfaction is a top QA Priority.
+“Release Early, Release Often”: Every CIO loves this slogan for many obvious reasons. Automated Testing is the enabler of that.
+The natural outcome of frequent releases is a lot more testing effort, especially regression testing. The only solution is to do that using automated test scripts.
+Acceptance tests should always be automated..The reason is simple: cons
+
+“In my experience, great developers do not always make great testers, but great testers (who also have strong design skills) can make great developers. It’s a mindset and a passion. … They are gold”.
+- Google VP Patrick Copeland, in an interview (2010)
+
+“95% of the time, 95% of test engineers will write bad GUI automation just because it’s a very difficult thing to do correctly”.
+- this interview from Microsoft Test Guru Alan Page (2015)
+
+“Testing is harder than developing. If you want to have good testing you need to put your best people in testing.”
+- Gerald Weinberg, in a podcast (2018)
+

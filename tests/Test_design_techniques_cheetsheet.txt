@@ -1,0 +1,9 @@
+https://medium.com/10-minutes-qa-story/test-design-techniques-cheetsheet-26546c4271c2
+List of techniques:
+Equivalent classes
+Boundary values
+Cause effect analysis
+The error prediction - based on experience
+Pairwise testing
+State diagram
+Decision table
